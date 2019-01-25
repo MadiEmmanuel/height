@@ -4,22 +4,15 @@
 # In[2]:
 
 
-import numpy
+import sys
+from PIL import Image
+import numpy as np
+import matplotlib.pyplot as plt
 
-ref = 2.12
+i = Image.open('IMG_20171112_093350.jpg')
+iar = np.asarray(i)
 
-def height(h):
-    
-    if h > ref: 
-        result = ref - h 
-        result = abs(result)
-    
-    else:
-        result = ref - h
-        
-    
-    return result
-
-height(3)
+plt.imshow(iar)
+plt.show()
     
 
